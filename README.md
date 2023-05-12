@@ -38,8 +38,7 @@ REQUIRED SECTIONS:
 # 📖 [Link to Rails backend](https://github.com/Piercel2022/hello-rails-backend)
 
 
-
-hello-react-frontend  is a front-end app that is built as one app to connect with the rails framework
+**[hello-react-frontend]** is a front-end app that is built as one app to connect with the rails framework
 
 ## 🛠 Built With <a name="built-with"></a>
 
