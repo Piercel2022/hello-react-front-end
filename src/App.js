@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMessages, selectMessages } from './reducers/messagesSlice';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Greeting from './components/Greetings';
+import store from './redux/configureStore';
 
-function App() {
-  const dispatch = useDispatch();
-  const messages = useSelector(selectMessages);
-
-  useEffect(() => {
-    dispatch(fetchMessages());
-  }, [dispatch]);
-
-
-  return (
-    <>
-      <h1>Greeting App </h1>
-      {messages.content}
-    </>
-  );
-};
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
+);
 
 export default App;
