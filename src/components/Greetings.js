@@ -7,7 +7,7 @@ const Greeting = () => {
 
   useEffect(() => {
     dispatch(fetchRandomGreeting());
-  }, []);
+  });
 
   // const greeting = useSelector((state) => state.greetings.greeting);
   // console.log(greeting, 'text');
